@@ -100,7 +100,7 @@ const Home = () => {
         )}
         {currentPlayer && !winner && (
           <>
-            <div className="flex flex-row absolute top-0 bg-gray-50 rounded-b-[20px] px-10 border border-gray-200">
+            <div className="flex flex-row absolute top-0 bg-gray-50 rounded-b-[20px] px-10 border border-gray-200 m-0 p-0">
               <h2 className="text-xl mb-2 text-gray-500 font-medium me-10">
                 {player1}:
                 <span className="ms-2 text-blue-500">{scorePlayer1}</span>
@@ -110,7 +110,7 @@ const Home = () => {
                 <span className="ms-2 text-blue-500">{scorePlayer2}</span>
               </h2>
             </div>
-            <div className="flex flex-col p-10 bg-gray-50 rounded-lg border border-gray-200 board mt-3">
+            <div className="flex flex-col p-10 bg-gray-50 rounded-lg border border-gray-200 board m-0">
               <h2 className="text-xl mb-2 text-gray-500 font-medium text-center">
                 Vez do Jogador:
                 <span className="ms-2 text-blue-500">{currentPlayer}</span>
@@ -132,7 +132,7 @@ const Home = () => {
         )}
 
         {winner && (
-          <div>
+          <div className="text-center">
             {winner === 'Draw' ? (
               <h2>É um empate!</h2>
             ) : (
@@ -142,7 +142,7 @@ const Home = () => {
               className="p-2 bg-blue-500 hover:bg-blue-600 text-white rounded transition-all duration-700 mt-4"
               onClick={() => resetData()}
             >
-              Restart
+              Jogar novamente
             </button>
           </div>
         )}
